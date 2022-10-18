@@ -20,18 +20,18 @@ public class BootStrapData implements CommandLineRunner  {
 
     @Override
     public void run(String... args) throws Exception {
-        Author carlos = new Author("Carlos", "Castaneda");
+     /*   Author carlos = new Author("Carlos", "Castaneda");
         Book orlovdar = new Book("Orlov Dar", "0123212");
         carlos.getBooks().add(orlovdar);
         orlovdar.getAuthors().add(carlos);
 
         authorRepository.save(carlos);
-        bookRepository.save(orlovdar);
+        bookRepository.save(orlovdar);*/
 
         Author nice = new Author("Fridrih", "Nice");
         Book zaraturstra = new Book("Tako je govorio Zaratustra", "6545646");
-        carlos.getBooks().add(zaraturstra);
-        orlovdar.getAuthors().add(nice);
+        nice.getBooks().add(zaraturstra);
+        zaraturstra.getAuthors().add(nice);
 
         authorRepository.save(nice);
         bookRepository.save(zaraturstra);

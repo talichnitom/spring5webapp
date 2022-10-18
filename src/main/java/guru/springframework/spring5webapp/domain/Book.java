@@ -13,10 +13,11 @@ public class Book {
 
     private String title;
     private String isbn;
+
     @ManyToMany
     @JoinTable(name = "author_books",joinColumns = @JoinColumn(name = "book_id"),
     inverseJoinColumns = @JoinColumn(name ="author_id"))
-    private Set<Author> authors = new HashSet<Author>();
+    private Set<Author> authors = new HashSet<>();
 
     public Book(){
 

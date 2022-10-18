@@ -9,13 +9,13 @@ public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
 
     private String firstName;
     private String lastName;
 
     @ManyToMany(mappedBy = "authors")
-    private Set<Book> books = new HashSet<Book>();
+    private Set<Book> books = new HashSet<>();
 
     public Author(){
 
@@ -51,17 +51,17 @@ public class Author {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        id = id;
     }
 
     @Override
     public String toString() {
         return "Author{" +
-                "Id=" + Id +
+                "Id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", books=" + books +
@@ -75,11 +75,11 @@ public class Author {
 
         Author author = (Author) o;
 
-        return Id.equals(author.Id);
+        return id.equals(author.id);
     }
 
     @Override
     public int hashCode() {
-        return Id.hashCode();
+        return id.hashCode();
     }
 }
